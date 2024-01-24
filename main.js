@@ -1,4 +1,6 @@
 const express = require('express')
+const blog = require('./routes/blog.js')
+
 const app = express()
 const port = 3000
 
@@ -34,6 +36,9 @@ app.put('/', (req, res) => {
 //     res.send('Hello World!')
 //     console.log("Get request.")
 // })
+
+// Using router
+app.use('/blog', blog)
 
 
 app.listen(port, () => {
