@@ -5,7 +5,7 @@ const app = express()
 const port = 3000
 
 // Use of public folder
-// built nod
+// built in
 app.use(express.static("public"))
 
 // Middleware
