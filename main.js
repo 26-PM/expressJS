@@ -4,7 +4,15 @@ const blog = require('./routes/blog.js')
 const app = express()
 const port = 3000
 
+// Use of public folder
+// built nod
 app.use(express.static("public"))
+
+// Middleware
+app.use((req, res, next) => {
+  console.log('Time:', Date.now())
+  next()
+})
 
 // GET Request
 app.get('/', (req, res) => {
